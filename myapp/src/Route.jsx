@@ -1,7 +1,15 @@
 import React from 'react'
+import {Routes,Route, Link} from 'react-router-dom'
 
-export const Route = () => {
+import Parent from './Parent'
+
+export default function ApplicationRoute() {
   return (
-    <div></div>
+    <>
+    <Routes>
+
+        <Route path='/parent' element={<Parent></Parent>}/>
+    </Routes>
+    </>
   )
 }
