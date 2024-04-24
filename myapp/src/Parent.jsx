@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Button from '@mui/material/Button';
-import { DisplayUsingDialogBox } from './DisplayUsingDialogBox';
 import { EmployeeForm } from './EmployeeForm';
+import DisplayDatWithGrid from './DisplayDatWithGrid';
 
 export default function Parent(){
 
@@ -23,7 +23,7 @@ export default function Parent(){
 
       
       <EmployeeForm open={open}   handleClose={handleClose} data={data} SetData={SetData}/>
-      <DisplayUsingDialogBox data={data}/>
+      <DisplayDatWithGrid data={data}/>
 
     </div>
   )

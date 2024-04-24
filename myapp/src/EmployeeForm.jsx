@@ -19,7 +19,7 @@ export const EmployeeForm = (props) => {
       const handleSave = ()=>{
 
         let p =[...data];
-        p.push(form);
+        p.push({...form,id: p.length});
         SetData(p);
         handleClose();
       }
