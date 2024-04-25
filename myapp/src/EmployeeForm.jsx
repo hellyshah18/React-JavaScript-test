@@ -8,14 +8,33 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 
 export const EmployeeForm = (props) => {
-    const [form,setform]= useState({
+  const {open,handleClose,data,SetData,index,setIndex} = props;
+   
+      const [form,setform]= useState({
         firstName: "",
-        lastName :""
+        lastName :"",
+        id:0
     
       });
       const handleChange=(e)=>{
         setform({...form,[e.target.name]:e.target.value})
       }
+      useEffect(()=>{
+
+        if(index >=0)
+        {
+          setform(data[index])
+        }
+        else
+        {
+          setform({
+            firstName:"",
+            lastName : "",
+            id:0
+          })
+        }
+    
+      },[index,open])
       const handleSave = ()=>{
 
         let p =[...data];
@@ -23,7 +42,6 @@ export const EmployeeForm = (props) => {
         SetData(p);
         handleClose();
       }
-      const {open,handleClose,data,SetData} = props;
   return (
     <Dialog
     open={open}
