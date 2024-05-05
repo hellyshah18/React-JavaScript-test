@@ -9,7 +9,7 @@ export const DialogBox = (props) => {
       firstname: "",
       lastname: "",
       email:'',
-      
+
     });
 
     console.log(employee);
@@ -24,7 +24,7 @@ export const DialogBox = (props) => {
     let baseurl ='https://6637086d288fedf6937f3dd8.mockapi.io/employee/employee'
     
     let url = data
-      ? `https://6637086d288fedf6937f3dd8.mockapi.io/employee/employee/${data.id}`
+      ? `https://6637086d288fedf6937f3dd8.mockapi.io/employee/employee/${employee.id}`
       : baseurl;
     fetch(url, {
       method: data ? "PUT" : "POST",
