@@ -27,7 +27,7 @@ export const DialogBox = (props) => {
       ? `https://6637086d288fedf6937f3dd8.mockapi.io/employee/employee/${employee.id}`
       : baseurl;
     fetch(url, {
-      method: data ? "PUT" : "POST",
+       method: data ? "PUT" : "POST",
       body: JSON.stringify(employee),
       headers: {
         "Content-Type": "Application/json",

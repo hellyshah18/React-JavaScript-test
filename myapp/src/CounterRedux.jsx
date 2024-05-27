@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Decre, Incre } from './action/counteraction'
 
 export default function CounterRedux() {
-    const d=useSelector(y=>y)
+    const d=useSelector(y=>y.counter)
     const p= useDispatch()
     const incre=()=>{
         p(Incre())
